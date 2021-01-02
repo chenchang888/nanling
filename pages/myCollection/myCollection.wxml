@@ -1,0 +1,8 @@
+<view class="policy_wrap">
+    <view class="policy_list">
+      <navigator class="policy_item" wx:for="{{10}}" url="../policysDetail/policysDetail">
+        <view class="policy_title">列表标题列表标题列表标题列表标题列表标题列表标题列表标题</view>
+        <view class="policy_time">2020-01-01</view>
+      </navigator>
+    </view>
+  </view>

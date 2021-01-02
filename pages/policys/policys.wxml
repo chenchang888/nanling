@@ -1,0 +1,31 @@
+<view class="wrap">
+  <!-- 头部 -->
+  <mySearch></mySearch>
+  <!-- 主体 -->
+  <view class="main">
+    <!-- 等级 主题 -->
+    <view class="policy_choose">
+      <picker class="policy_item" bindtap="chooseGrade" range="{{grade}}">发布机构</picker>
+      <picker class="policy_item" bindtap="chooseTheme" range="{{theme}}">政策主题</picker>
+    </view>
+    <!--  热门政策  -->
+    <view class="policy_hot">
+      <view class="policy_text-name">热门政策</view>
+      <view class="policy_hot-list">
+        <view class="policy_nav {{current==='0'?'nav_active':''}}" bindtap="handleTheme" data-num="0">政策主题</view>
+        <view class="policy_nav {{current==='1'?'nav_active':''}}" bindtap="handleTheme" data-num="1">政策主题</view>
+        <view class="policy_nav {{current==='2'?'nav_active':''}}" bindtap="handleTheme" data-num="2">政策主题</view>
+      </view>
+    </view>
+    <!-- 政策列表 -->
+    <view class="policy_wrap">
+      <view class="policy_list">
+        <navigator class="policy_item" wx:for="{{5}}" url="../policysDetail/policysDetail">
+          <view class="policy_title">政策标题政策标题政策标题政策标题政策标题政策标题</view>
+          <view class="policy_time">2020-09-08</view>
+        </navigator>
+      </view>
+      <navigator class="policy_more">更 多</navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="wrap">
+    <!-- 头部搜索 -->
+    <mySearch></mySearch>
+    <!-- 主体列表 -->
+    <view class="main">
+        <!-- 政策列表 -->
+        <view class="policy_wrap">
+            <view class="policy_list">
+                <view class="policy_item" wx:for="{{8}}">
+                    <view class="policy_title">办事指南标题办事指南标题办事指南标题办事指南标题</view>
+                    <view class="policy_time">2020-09-08</view>
+                </view>
+            </view>
+            <navigator class="policy_more">更 多</navigator>
+        </view>
+    </view>
+</view>

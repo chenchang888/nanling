@@ -1,0 +1,62 @@
+<view class="wrap">
+  <!-- 头部 -->
+  <mySearch></mySearch>
+  <!-- 内容区域 -->
+  <view class="content">
+    <!-- 导航项 -->
+    <view id="nav">
+      <view class="areas">重点领域</view>
+      <view class="nav_wrap">
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/basicLevel.png" mode="widthFix" />
+          <view>基层两化</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/sixGuarantees.png" mode="widthFix" />
+          <view>六稳六保</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/unscramble.png" mode="widthFix" />
+          <view>政策解读</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none" url="../organiza/organiza">
+          <image class="" src="../../image/mechanism.png" mode="widthFix" />
+          <view>机构职能</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/opinion.png" mode="widthFix" />
+          <view>意见征集</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/meeting.png" mode="widthFix" />
+          <view>会议开放</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/responding.png" mode="widthFix" />
+          <view>回应关切</view>
+        </navigator>
+        <navigator class="nav_item" hover-class="none">
+          <image class="" src="../../image/other.png" mode="widthFix" />
+          <view>其他</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 专题 -->
+    <view class="column {{tabFix?'fixed':''}}">
+      <navigator class="column_item">热门政策</navigator>
+      <navigator class="column_item">政策专题</navigator>
+      <navigator class="column_item">政策专题</navigator>
+      <navigator class="column_item">政策专题</navigator>
+    </view>
+    <!-- 政策列表 -->
+    <view id="policy_con" class="policy_wrap {{tabFix?'contentTop':''}}">
+      <view class="policy_list">
+        <navigator class="policy_item" wx:for="{{10}}" wx:key="index">
+          <view class="policy_title">政策标题政策标题政策标题政策标题政策标题政策标题</view>
+          <view class="policy_time">2020-09-08</view>
+        </navigator>
+      </view>
+      <navigator class="policy_more" open-type="switchTab" url="../policys/policys">更 多</navigator>
+    </view>
+  </view>
+</view>

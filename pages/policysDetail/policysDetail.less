@@ -1,0 +1,204 @@
+.wrap {
+    padding: 25rpx;
+    color: #545454;
+
+    .container {
+        width: 100%;
+        padding: 20rpx 10rpx;
+        margin-bottom: 100rpx;
+        box-shadow: 0px 2px 4px 1px rgba(204, 204, 204, 0.8);
+        border-radius: 5px;
+        background-color: #fff;
+
+        .header {
+            position: relative;
+            padding: 10rpx 0;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                border-bottom: 1rpx solid #989898;
+                transform: scaleY(0.5);
+            }
+
+            .title {
+                font-size: 44rpx;
+                text-align: left;
+            }
+
+            .time {
+                width: 100%;
+                margin: 20rpx 0;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .other_mes {
+                display: flex;
+                justify-content: space-evenly;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        // 主体
+        .main {
+            margin-top: 50rpx;
+
+            .content {
+                font-size: 32rpx;
+            }
+
+            .file {
+                margin-top: 40rpx;
+
+                .file_name {
+                    font-size: 30rpx;
+                    font-weight: bold;
+                }
+
+                .file_list {
+                    .file_item {
+                        padding: 10rpx 0;
+                    }
+                }
+            }
+
+            // 政策解读
+            .unscramble {
+                margin-top: 40rpx;
+
+                .unscramble_name {
+                    font-size: 30rpx;
+                    font-weight: bold;
+                }
+
+                .unscramble_item {
+                    color: #3BA0FF;
+                }
+            }
+
+            // 点赞分享
+            .interaction {
+                display: flex;
+                justify-content: space-between;
+                padding: 30rpx;
+
+                .fabulous,
+                .share {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    color: #989898;
+                    background-color: #fff;
+
+                    .iconfont {
+                        margin-right: 10rpx;
+                    }
+                }
+                .active{
+                    color:var(--themeColor)
+                }
+            }
+
+            // 评价
+            .evaluate_wrap {
+                margin-top: 10rpx;
+                .evaluate_title {
+                    font-size: 30rpx;
+                    font-weight: bold;
+                }
+
+                .evaluate_content {
+                    .evaluate_user {
+                        display: flex;
+                        align-items: flex-end;
+
+                        .iconfont {
+                            font-size: 34rpx;
+                            color: var(--themeColor);
+                        }
+
+                        .usere_name {
+                            margin-left: 12rpx;
+                            font-weight: bold;
+                            font-size: 30rpx;
+                        }
+                    }
+                }
+                // 无评论显示
+                .tips{
+                    width: 100%;
+                    line-height: 100rpx;
+                    text-align: center;
+                    font-size: 30rpx;
+                }
+            }
+        }
+
+        // 底部
+        .foot {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100rpx;
+            padding: 0 25rpx;
+            border-top: 1rpx solid #f6f6f6;
+            background-color: #fff;
+            .left{
+                display: flex;
+                align-items: center;
+                .input{
+                    width: 400rpx;
+                    height: 60rpx;
+                    margin-right: 12rpx;
+                    background-color: #f6f6f6;
+                    input{
+                        height: 100%;
+                    }
+                }
+                .btn{
+                    width: 94rpx;
+                    line-height: 60rpx;
+                    border-radius: 5rpx;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #1CACFF;
+                }
+            }
+            .right{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                .iconfont{
+                    font-size: 50rpx;
+                    color: #989898;
+                }
+                // 收藏
+                .active{
+                    color:var(--themeColor)
+                }
+                .collect{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    margin-left: 40rpx;
+                }
+                button{
+                    text-align: center;
+                    margin-left: 20rpx;
+                    background-color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}

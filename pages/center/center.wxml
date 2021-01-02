@@ -1,0 +1,28 @@
+<view class="wrap">
+  <view class="header">
+    <view class="head_container">
+      <view class="head_portrait" wx:if="{{show}}">
+        <view class="portrait">
+            <image src="../../image/img.jpg"></image>
+        </view>
+        <view class="login">登 录</view>
+      </view>
+      <view class="head_portrait" wx:else>
+        <view class="portrait">
+          <image src="../../image/img.jpg"></image>
+        </view>
+        <view class="login">名 称</view>
+      </view>
+      <view class="circular_two"></view>
+    </view>
+    <view class="circular_one"></view>
+  </view>
+  <view class="main">
+    <navigator class="collect" url="../myCollection/myCollection">
+      <view class="collect_img">
+        <image class="" src="../../icon/collect.png" />
+      </view>
+      <view class="collect_text">我的收藏</view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/center/center",
+    "pages/guide/guide",
+    "pages/policys/policys",
+    "pages/policysDetail/policysDetail",
+    "pages/myCollection/myCollection",
+    "pages/typeList/typeList",
+    "pages/areasList/areasList",
+    "pages/organiza/organiza",
+    "pages/organizaList/organizaList",
+    "pages/organizaDetail/organizaDetail",
+    "pages/opinions/opinions",
+    "pages/opinionDetail/opinionDetail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1CA9FE",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "南陵县小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "borderStyle":"white",
+    "color":"#333",
+    "selectedColor":"#1D84F8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"./icon/index.png",
+        "selectedIconPath":"./icon/index_active.png"
+      },
+      {
+        "pagePath": "pages/policys/policys",
+        "text": "政策文件",
+        "iconPath":"./icon/file.png",
+        "selectedIconPath":"./icon/file_active.png"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "办事指南",
+        "iconPath":"./icon/guide.png",
+        "selectedIconPath":"./icon/guide_active.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath":"./icon/center.png",
+        "selectedIconPath":"./icon/center_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

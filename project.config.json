@@ -1,0 +1,112 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.1",
+  "appid": "wx22d2e5c92cd92e4e",
+  "projectname": "NangLing",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/center/center",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "政策文件",
+          "pathName": "pages/policys/policys",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "办事指南",
+          "pathName": "pages/guide/guide",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/policyDetail/policyDetail",
+          "pathName": "pages/policyDetail/policyDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "政策详情",
+          "pathName": "pages/policysDetail/policysDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "机构列表",
+          "pathName": "pages/organizaList/organizaList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "机构设置",
+          "pathName": "pages/organiza/organiza",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

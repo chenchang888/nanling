@@ -1,0 +1,17 @@
+@import "./utils/iconfont.wxss";
+page{
+  --themeColor:#1D84F8;
+    background-color: #f6f6f6;
+}
+page,
+view,
+text,
+input,
+swiper,
+navigator,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}

@@ -1,0 +1,12 @@
+<view class="wrap">
+  <view class="main">
+    <view class="container">
+      <view class="type">类型名称</view>
+      <navigator class="title" url="../organizaList/organizaList?id=0" wx:for="{{5}}">标题标题标题标题标题标题</navigator>
+    </view>
+    <view class="container">
+      <view class="type">类型名称</view>
+      <navigator class="title" url="../organizaList/organizaList?id=1" wx:for="{{5}}">标题标题标题标题标题标题</navigator>
+    </view>
+  </view>
+</view>

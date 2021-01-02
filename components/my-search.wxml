@@ -1,0 +1,8 @@
+<view class="header">
+    <view class="search">
+        <image class="img" src="../icon/search.png"></image>
+        <input class="inp" type="text" placeholder="输关键词">
+        </input>
+    </view>
+    <view class="search_text">搜索</view>
+</view>

@@ -1,0 +1,38 @@
+<view class="wrap">
+  <!-- 主体 -->
+  <view class="container">
+    <view class="header">
+      <view class="nav {{show===index?'current':''}}" wx:for="{{type==='0'?organiza:township}}"  wx:key="index" bindtap="handleCurrent"
+        data-index="{{index}}">
+        {{item}}</view>
+    </view>
+    <!-- 机构领导 -->
+    <view class="main {{show===0?'':'hide'}}">
+      <navigator class="list" wx:for="{{10}}" wx:key="index" url="../policysDetail/policysDetail">
+        <view class="title">南陵县发展和改革委员会（公共资源交易监督管理局、粮食和物资储备局）胡伟简介南陵县发展和改革委员会（公共资源交易监督管理局、粮食和物资储备局）胡伟简介</view>
+        <view class="time">2020-09-09</view>
+      </navigator>
+    </view>
+    <!-- 机构简介 -->
+    <view class="main {{show===1?'':'hide'}}">
+      <navigator class="list" wx:for="{{10}}" wx:key="index" url="../policysDetail/policysDetail">
+        <view class="title">南陵县发展和改革委员会简介</view>
+        <view class="time">2020-09-09</view>
+      </navigator>
+    </view>
+    <!-- 内设机构 -->
+    <view class="main {{show===2?'':'hide'}}">
+      <navigator class="list" wx:for="{{10}}" wx:key="index" url="../policysDetail/policysDetail">
+        <view class="title">安全卫生管理股</view>
+        <view class="time">2020-09-09</view>
+      </navigator>
+    </view>
+    <!-- 下属单位 -->
+    <view class="main {{show===3?'':'hide'}}">
+      <navigator class="list" wx:for="{{10}}" wx:key="index" url="../policysDetail/policysDetail">
+        <view class="title">南陵县教育局教师发展中心</view>
+        <view class="time">2020-09-09</view>
+      </navigator>
+    </view>
+  </view>
+</view>
