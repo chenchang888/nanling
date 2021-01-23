@@ -15,3 +15,10 @@
         </view>
     </view>
 </view>
+
+<!-- // {
+      //   "pagePath": "pages/guide/guide",
+      //   "text": "办事指南",
+      //   "iconPath":"./icon/guide.png",
+      //   "selectedIconPath":"./icon/guide_active.png"
+      // }, -->

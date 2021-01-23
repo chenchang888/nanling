@@ -1,62 +1,60 @@
 <view class="wrap">
   <!-- 头部 -->
-  <mySearch></mySearch>
+  <mySearch bindInputEvent="handleSearch"></mySearch>
   <!-- 内容区域 -->
   <view class="content">
     <!-- 导航项 -->
     <view id="nav">
       <view class="areas">重点领域</view>
       <view class="nav_wrap">
-        <navigator class="nav_item" hover-class="none">
+        <navigator open-type="reLaunch"class="nav_item" hover-class="none" url="../policys/policys?id=1" >
           <image class="" src="../../image/basicLevel.png" mode="widthFix" />
-          <view>基层两化</view>
+          <view>政府文件</view>
         </navigator>
-        <navigator class="nav_item" hover-class="none">
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys?id=2">
           <image class="" src="../../image/sixGuarantees.png" mode="widthFix" />
-          <view>六稳六保</view>
+          <view>政策法规</view>
         </navigator>
-        <navigator class="nav_item" hover-class="none">
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys?id=3">
           <image class="" src="../../image/unscramble.png" mode="widthFix" />
-          <view>政策解读</view>
+          <view>政府公报</view>
         </navigator>
-        <navigator class="nav_item" hover-class="none" url="../organiza/organiza">
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys?id=5">
           <image class="" src="../../image/mechanism.png" mode="widthFix" />
           <view>机构职能</view>
         </navigator>
-        <navigator class="nav_item" hover-class="none">
-          <image class="" src="../../image/opinion.png" mode="widthFix" />
-          <view>意见征集</view>
-        </navigator>
-        <navigator class="nav_item" hover-class="none">
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys?id=7">
           <image class="" src="../../image/meeting.png" mode="widthFix" />
           <view>会议开放</view>
         </navigator>
-        <navigator class="nav_item" hover-class="none">
-          <image class="" src="../../image/responding.png" mode="widthFix" />
-          <view>回应关切</view>
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys?id=9">
+          <image class="" src="../../image/opinion.png" mode="widthFix" />
+          <view>保障性住房</view>
         </navigator>
-        <navigator class="nav_item" hover-class="none">
-          <image class="" src="../../image/other.png" mode="widthFix" />
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys?id=10">
+          <image class="" src="../../image/responding.png" mode="widthFix" />
+          <view>农村危房</view>
+        </navigator>
+        <navigator open-type="reLaunch" class="nav_item" hover-class="none" url="../policys/policys">
+          <image class="" src="../../image/other.png"  mode="widthFix" />
           <view>其他</view>
         </navigator>
       </view>
     </view>
     <!-- 专题 -->
     <view class="column {{tabFix?'fixed':''}}">
-      <navigator class="column_item">热门政策</navigator>
-      <navigator class="column_item">政策专题</navigator>
-      <navigator class="column_item">政策专题</navigator>
-      <navigator class="column_item">政策专题</navigator>
+      <view class="column_item {{classifyId?'':'active_type'}}" bindtap="handleHot">热门政策</view>
+      <view class="column_item {{classifyId===item.id?'active_type':''}}" wx:for="{{hotList}}" wx:key="id" bindtap="handleChoose" data-id="{{item.id}}">{{item.name}}</view>
     </view>
     <!-- 政策列表 -->
     <view id="policy_con" class="policy_wrap {{tabFix?'contentTop':''}}">
       <view class="policy_list">
-        <navigator class="policy_item" wx:for="{{10}}" wx:key="index">
-          <view class="policy_title">政策标题政策标题政策标题政策标题政策标题政策标题</view>
-          <view class="policy_time">2020-09-08</view>
+        <navigator class="policy_item" wx:for="{{policyList}}" wx:key="id"  url="../policysDetail/policysDetail?id={{item.id}}">
+          <rich-text class="policy_title" nodes="{{item.title}}"></rich-text>
+          <rich-text class="policy_time">{{item.releaseDate}}</rich-text>
         </navigator>
       </view>
-      <navigator class="policy_more" open-type="switchTab" url="../policys/policys">更 多</navigator>
+      <navigator class="policy_more" open-type="reLaunch" url="../policys/policys?id={{classifyId}}">更 多</navigator>
     </view>
   </view>
 </view>

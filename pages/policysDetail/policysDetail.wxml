@@ -1,23 +1,24 @@
 <view class="wrap">
     <view class="container">
-
         <!-- 头部标题 -->
         <view class="header">
-            <view class="title">南陵县人民政府办公室关于印发南陵县深化小型水库管理体制改革示范县创建工作方案的通知</view>
-            <view class="time">发布时间：2019-04-30 18:00</view>
+            <view class="title">
+                <rich-text nodes="{{policyDetail.title}}"></rich-text>
+            </view>
+            <!-- <view class="time">发布时间：2019-04-30 18:00</view> -->
             <view class="other_mes">
-                <view class="source">信息来源：南陵县融媒体中心</view>
-                <view class="read_num">阅读次数：106</view>
+                <view class="source">信息来源：{{policyDetail.resource}}</view>
+                <!-- <view class="read_num">阅读次数：106</view> -->
             </view>
         </view>
         <!-- 主体 -->
         <view class="main">
             <!-- 内容 -->
             <view class="content">
-                详情内容：大浦试验区、经济开发区管委会，各镇人民政府，县政府各部门、各直属单位，驻陵各单位：
+                <rich-text nodes="{{contents}}"></rich-text>
             </view>
             <!-- 附件 -->
-            <view class="file">
+            <!-- <view class="file">
                 <view class="file_name">附件</view>
                 <view class="file_list">
                     <view class="file_item">
@@ -27,19 +28,19 @@
                         2.小型水库管理体制改革示范县工作任务清单
                     </view>
                 </view>
-            </view>
+            </view> -->
             <!-- 政策解读 -->
-            <view class="unscramble">
+            <!-- <view class="unscramble">
                 <view class="unscramble_name">政策解读</view>
                 <view class="unscramble_item">
                     【政策解读】南陵县人民政府办公室关于印发南陵县深化小型水库管理体制改革示范县创建工作方案的通知
                 </view>
-            </view>
+            </view> -->
             <!-- 点赞 分享 -->
             <view class="interaction">
-                <button class="fabulous {{fabulousFlag?'active':''}}" bindtap="handleActive" size="mini">
+                <button class="fabulous {{policyDetail.status?'active':''}}" bindtap="handleActive" size="mini">
                     <icon class="iconfont icon-dianzan"></icon>
-                    <view>999</view>
+                    <view>{{policyDetail.num}}</view>
                 </button>
                 <button class="share" open-type="share" size="mini">
                     <icon class="iconfont icon-fenxiang"></icon>
@@ -49,38 +50,28 @@
             <!-- 评价 -->
             <view class="evaluate_wrap">
                 <view class="evaluate_title">评价</view>
-                <!-- <view class="evaluate_content">
+                <view class="evaluate_content" wx:if="{{policyDetail.checkStatus}}">
                     <view class="evaluate_user">
                         <icon class="iconfont icon-mian-renwu-copy"></icon>
-                        <view class="usere_name">张宇</view>
+                        <view class="usere_name">{{commentParams.nickName}}</view>
                     </view>
-                    <view class="content_details">
-                        对纳税人提供生活服务取得的收入，免征增值税。无论选择一般计税方法还是简易计税方法，均可以按规定享受免征增值税政策。
-                    </view>
+                    <view class="content_details">{{policyDetail.evaluation}}</view>
                 </view>
-                <view class="evaluate_content">
-                    <view class="evaluate_user">
-                        <icon class="iconfont icon-mian-renwu-copy"></icon>
-                        <view class="usere_name">张宇</view>
-                    </view>
-                    <view class="content_details">
-                        对纳税人提供生活服务取得的收入，免征增值税。无论选择一般计税方法还是简易计税方法，均可以按规定享受免征增值税政策。
-                    </view>
-                </view> -->
-                <view class="tips {{}}">暂无评价</view>
+                <view class="tips" wx:else>暂无评价</view>
             </view>
         </view>
         <!-- 底部 -->
         <view class="foot">
             <view class="left">
                 <view class="input">
-                    <input type="text"></input>
+                    <input type="text" value="{{commentParams.content}}" bindinput="handleInput"></input>
                 </view>
-                <view class="btn">提交</view>
+                <view class="btn" bindtap="handleComment">提交</view>
             </view>
             <view class="right">
                 <view class="collect">
-                    <icon class="iconfont icon-wodeshoucang-copy {{collectFlag?'active':''}}" bindtap="handleCollect">
+                    <icon class="iconfont icon-wodeshoucang-copy {{collectParams.delFlag?'active':''}}"
+                        bindtap="handleCollect">
                     </icon>
                 </view>
                 <button open-type="share" size="mini">

@@ -3,15 +3,15 @@
     <view class="head_container">
       <view class="head_portrait" wx:if="{{show}}">
         <view class="portrait">
-            <image src="../../image/img.jpg"></image>
+            <image src="../../image/user.png"></image>
         </view>
-        <view class="login">登 录</view>
+        <button class="login" size="mini" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="handleLogin"><view>登 录</view></button>
       </view>
       <view class="head_portrait" wx:else>
         <view class="portrait">
-          <image src="../../image/img.jpg"></image>
+          <image src="{{userInfo.avatarUrl}}"></image>
         </view>
-        <view class="login">名 称</view>
+        <view class="name">{{userInfo.nickName}}</view>
       </view>
       <view class="circular_two"></view>
     </view>

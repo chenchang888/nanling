@@ -1,8 +1,12 @@
-<view class="policy_wrap">
-    <view class="policy_list">
-      <navigator class="policy_item" wx:for="{{10}}" url="../policysDetail/policysDetail">
-        <view class="policy_title">列表标题列表标题列表标题列表标题列表标题列表标题列表标题</view>
-        <view class="policy_time">2020-01-01</view>
+<view class="policy_wrap" wx:if="{{wrapShow}}">
+  <view class="policy_list">
+    <view wx:if="{{contentFlag}}">
+      <navigator class="policy_item" wx:for="{{collectList}}" wx:key="policyId"
+        url="../policysDetail/policysDetail?id={{item.policyId}}">
+        <rich-text class="policy_title">{{item.title}}</rich-text>
+        <rich-text class="policy_time">{{item.releaseDate}}</rich-text>
       </navigator>
     </view>
+    <view class="tips" wx:else>暂无收藏内容</view>
   </view>
+</view>
